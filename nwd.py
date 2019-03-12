@@ -18,7 +18,3 @@ def nwd_optimal(a, b):
 
 def nww(a, b):
     return a * b / nwd(a, b)
-
-
-print(nwd(3, 27))
-print(nwd_optimal(3, 27))
