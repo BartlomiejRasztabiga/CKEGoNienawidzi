@@ -2,6 +2,7 @@ from nwd import nwd, nwd_optimal, nww
 from fibonacci import fibo
 from wydawanie_reszty_zachlanny import wydawanie
 from min_max import min_max
+from sortowanie import babelek_sort
 
 import unittest
 
@@ -40,6 +41,10 @@ class TestAlgorithms(unittest.TestCase):
         self.assertEqual(min_max([0, 0, 0, 0, -1, 1, 5, -1, 200, 5, -90]), (-90, 200))
         self.assertEqual(min_max([0]), (0, 0))
         self.assertEqual(min_max([1, 1]), (1, 1))
+
+    def test_babelek_sort(self):
+        self.assertEqual(babelek_sort([-5, 6, 932, -5632, 237, 0]), [-5632, -5, 0, 6, 237, 932])
+        self.assertEqual(babelek_sort([1, 0, 0, 0, 1, 1, -1]), [-1, 0, 0, 0, 1, 1, 1])
 
 
 if __name__ == '__main__':
