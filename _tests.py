@@ -1,6 +1,8 @@
 from nwd import nwd, nwd_optimal, nww
 from fibonacci import fibo
 from wydawanie_reszty_zachlanny import wydawanie
+from min_max import min_max
+
 import unittest
 
 
@@ -33,6 +35,11 @@ class TestAlgorithms(unittest.TestCase):
         self.assertEqual(wydawanie(129), [0, 0, 1, 0, 1, 0, 1, 2, 0])
         self.assertEqual(wydawanie(69420), [138, 2, 0, 0, 1, 0, 0, 0, 0])
         self.assertEqual(wydawanie(1337), [2, 1, 1, 0, 1, 1, 1, 1, 0])
+
+    def test_min_max(self):
+        self.assertEqual(min_max([0, 0, 0, 0, -1, 1, 5, -1, 200, 5, -90]), (-90, 200))
+        self.assertEqual(min_max([0]), (0, 0))
+        self.assertEqual(min_max([1, 1]), (1, 1))
 
 
 if __name__ == '__main__':
