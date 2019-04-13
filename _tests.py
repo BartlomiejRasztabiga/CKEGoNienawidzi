@@ -5,6 +5,7 @@ from min_max import min_max
 from sortowanie import babelek_sort
 from pierwiastek import pierwiastek
 from horner import horner
+from potegowanie_szybkie import szybkie
 
 import unittest
 
@@ -53,6 +54,10 @@ class TestAlgorithms(unittest.TestCase):
 
     def test_horner(self):
         self.assertEqual(horner([1, 0, 0, 1], 3, 1), 2)
+
+    def test_potegowanie_szybkie(self):
+        self.assertEqual(szybkie(100, 10), 100000000000000000000)
+        self.assertEqual(szybkie(2, 10), 1024)
 
 
 if __name__ == '__main__':
