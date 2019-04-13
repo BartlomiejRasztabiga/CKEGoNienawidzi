@@ -8,6 +8,7 @@ from horner import horner
 from potegowanie_szybkie import szybkie
 from miejsca_zerowe_f import zerowe
 from calkowanie import prostokatow
+from palindrom import palindrom
 
 import unittest
 
@@ -67,6 +68,10 @@ class TestAlgorithms(unittest.TestCase):
 
     def test_calkowanie(self):
         self.assertEqual(prostokatow(1, 3, 1000), 8.666665999999699)
+
+    def test_palindrom(self):
+        self.assertTrue(palindrom("kajak"))
+        self.assertFalse(palindrom("dupa"))
 
 
 if __name__ == '__main__':
