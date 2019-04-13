@@ -6,6 +6,7 @@ from sortowanie import babelek_sort
 from pierwiastek import pierwiastek
 from horner import horner
 from potegowanie_szybkie import szybkie
+from miejsca_zerowe_f import zerowe
 
 import unittest
 
@@ -58,6 +59,10 @@ class TestAlgorithms(unittest.TestCase):
     def test_potegowanie_szybkie(self):
         self.assertEqual(szybkie(100, 10), 100000000000000000000)
         self.assertEqual(szybkie(2, 10), 1024)
+
+    def test_zerowe(self):
+        self.assertEqual(zerowe(0, 10, 0.0000001), 2.4142135307192802)
+        self.assertEqual(zerowe(-3, 0, 0.0000001), -0.4142135828733444)
 
 
 if __name__ == '__main__':
