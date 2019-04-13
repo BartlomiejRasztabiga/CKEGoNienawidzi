@@ -3,6 +3,7 @@ from fibonacci import fibo
 from wydawanie_reszty_zachlanny import wydawanie
 from min_max import min_max
 from sortowanie import babelek_sort
+from pierwiastek import pierwiastek
 
 import unittest
 
@@ -45,6 +46,9 @@ class TestAlgorithms(unittest.TestCase):
     def test_babelek_sort(self):
         self.assertEqual(babelek_sort([-5, 6, 932, -5632, 237, 0]), [-5632, -5, 0, 6, 237, 932])
         self.assertEqual(babelek_sort([1, 0, 0, 0, 1, 1, -1]), [-1, 0, 0, 0, 1, 1, 1])
+
+    def test_pierwiastek(self):
+        self.assertEqual(pierwiastek(3, 0.0001), 1.7320508100147274)
 
 
 if __name__ == '__main__':
