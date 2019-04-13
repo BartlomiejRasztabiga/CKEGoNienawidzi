@@ -4,6 +4,7 @@ from wydawanie_reszty_zachlanny import wydawanie
 from min_max import min_max
 from sortowanie import babelek_sort
 from pierwiastek import pierwiastek
+from horner import horner
 
 import unittest
 
@@ -49,6 +50,9 @@ class TestAlgorithms(unittest.TestCase):
 
     def test_pierwiastek(self):
         self.assertEqual(pierwiastek(3, 0.0001), 1.7320508100147274)
+
+    def test_horner(self):
+        self.assertEqual(horner([1, 0, 0, 1], 3, 1), 2)
 
 
 if __name__ == '__main__':
