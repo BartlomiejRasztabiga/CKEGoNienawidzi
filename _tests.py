@@ -7,6 +7,7 @@ from pierwiastek import pierwiastek
 from horner import horner
 from potegowanie_szybkie import szybkie
 from miejsca_zerowe_f import zerowe
+from calkowanie import prostokatow
 
 import unittest
 
@@ -63,6 +64,9 @@ class TestAlgorithms(unittest.TestCase):
     def test_zerowe(self):
         self.assertEqual(zerowe(0, 10, 0.0000001), 2.4142135307192802)
         self.assertEqual(zerowe(-3, 0, 0.0000001), -0.4142135828733444)
+
+    def test_calkowanie(self):
+        self.assertEqual(prostokatow(1, 3, 1000), 8.666665999999699)
 
 
 if __name__ == '__main__':
