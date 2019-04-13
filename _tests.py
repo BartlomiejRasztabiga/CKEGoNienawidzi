@@ -9,6 +9,7 @@ from potegowanie_szybkie import szybkie
 from miejsca_zerowe_f import zerowe
 from calkowanie import prostokatow
 from palindrom import palindrom
+from anagram import anagram
 
 import unittest
 
@@ -72,6 +73,10 @@ class TestAlgorithms(unittest.TestCase):
     def test_palindrom(self):
         self.assertTrue(palindrom("kajak"))
         self.assertFalse(palindrom("dupa"))
+
+    def test_anagram(self):
+        self.assertTrue(anagram("adam", "dama"))
+        self.assertTrue(anagram("fraktal", "kartafl"))
 
 
 if __name__ == '__main__':
