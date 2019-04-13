@@ -10,6 +10,7 @@ from miejsca_zerowe_f import zerowe
 from calkowanie import prostokatow
 from palindrom import palindrom
 from anagram import anagram
+from cezar import cezar
 
 import unittest
 
@@ -77,6 +78,10 @@ class TestAlgorithms(unittest.TestCase):
     def test_anagram(self):
         self.assertTrue(anagram("adam", "dama"))
         self.assertTrue(anagram("fraktal", "kartafl"))
+
+    def test_cezar(self):
+        self.assertEqual(cezar("test", 9), "cnbc")
+        self.assertEqual(cezar("test", 3312312), "juij")
 
 
 if __name__ == '__main__':
