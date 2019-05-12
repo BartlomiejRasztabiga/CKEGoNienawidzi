@@ -7,7 +7,7 @@ from pierwiastek import pierwiastek
 from horner import horner
 from potegowanie_szybkie import szybkie
 from miejsca_zerowe_f import zerowe
-from calkowanie import prostokatow
+from calkowanie import prostokatow, trapezow
 from palindrom import palindrom
 from anagram import anagram
 from cezar import cezar
@@ -70,6 +70,7 @@ class TestAlgorithms(unittest.TestCase):
 
     def test_calkowanie(self):
         self.assertEqual(prostokatow(1, 3, 1000), 8.666665999999699)
+        self.assertEqual(trapezow(1, 3, 1000), 8.666667999999712)
 
     def test_palindrom(self):
         self.assertTrue(palindrom("kajak"))
